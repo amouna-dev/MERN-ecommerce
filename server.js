@@ -38,7 +38,7 @@ if(process.env.NODE_ENV === "production") {
     //index.html for all page routes
     app.get('*', (req, res) =>{
         res.sendFile(
-            path.resolve(__dirname, "./", "frontend", "build", "index.html"),
+            path.resolve(__dirname, "build", "index.html"),
             function(err){
                 res.status(500).send(err)
             }
