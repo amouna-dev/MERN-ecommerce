@@ -30,7 +30,7 @@ app.use('/api/filter', filterRouter);
 
 
 //deploy
-//if(process.env.NODE_ENV === "production") {
+if(process.env.NODE_ENV === "production") {
     //set static folder
     //All the js and css files will be read and served from this folder
     app.use(express.static(path.join(__dirname, "./frontend/build")))
@@ -44,7 +44,7 @@ app.use('/api/filter', filterRouter);
             }
             )
     })
-//}
+}
 
 app.listen(port, async (err) => {
     await connectDB()
